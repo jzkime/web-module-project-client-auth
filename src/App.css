@@ -1,38 +1,73 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+}
+
 .App {
   text-align: center;
+  background-color: rgb(249, 241, 239);
+  padding: 1%
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a, a:hover, a:visited {
+  text-decoration: none;
+  color:rgb(76, 76, 78)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-cred {
+  padding: 2%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-cred form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.login-cred form label {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#form-button {
+  padding: 2%;
+  border-radius: 10px;
+  background-color: rgb(249, 241, 239);
+}
+
+h1 {
+  padding: 3%;
+}
+
+nav a {
+  padding: 1%;
+  margin: 2%;
+}
+
+.friends-list h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.friends-list {
+  padding-top: 2%;
+  display: flex;
+  flex-wrap: wrap; 
+  align-content:space-between;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  row-gap: 20px;
+  column-gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.friend-container {
+  width: 25%;
+  background-color: rgb(249, 241, 239);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  border: 3px dashed rgb(76, 76, 78);
 }

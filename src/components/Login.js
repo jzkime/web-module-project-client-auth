@@ -27,7 +27,7 @@ class Login extends React.Component {
 
 render() {
     return(
-    <section>
+    <section className="login-cred">
         <form onSubmit={this.handleSubmit}>
             <label>Username
                 <input type='text' name='username' onChange={this.handleChange} />
@@ -35,7 +35,7 @@ render() {
             <label>Password
                 <input type='password' name='password' onChange={this.handleChange} />
             </label>
-            <input type='submit'/>
+            <input type='submit' id='form-button'/>
         </form>
     </section>
     )

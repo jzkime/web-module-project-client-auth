@@ -9,9 +9,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h2>Client Auth Project</h2>
-        <Link to='/login'>Login</Link>
-        <Link to='/friends' >Friends</Link>
+        <h1>Client Auth Project</h1>
+        <nav>
+          <Link to='/login'>Login</Link>
+          <Link to='/friends' >Friends</Link>
+        </nav>
       </div>
 
       <Route exact path={['/', '/login']} component={Login}/>
