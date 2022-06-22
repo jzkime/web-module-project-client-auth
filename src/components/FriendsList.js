@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import Friend from './Friend'
 
 class FriendsList extends React.Component {
     state = {
-        friends: []
+        friends: [],
+        selectedFriend: null
     }
 
     componentDidMount() {
@@ -28,7 +29,7 @@ class FriendsList extends React.Component {
                 </div>
             
                 { !!this.state.friends.length && this.state.friends.map(fr => {
-                    return <Friend friend={fr} key={fr.id}/>
+                    return <Friend friend={fr} key={fr.id} />
                 })}
                 {
                     !this.state.friends.length && <p>loading...</p>
@@ -39,4 +40,4 @@ class FriendsList extends React.Component {
   
 }
 
-export default FriendsList;
+export default withRouter(FriendsList);

@@ -12,8 +12,11 @@
 }
 
 a, a:hover, a:visited {
-  text-decoration: none;
   color:rgb(76, 76, 78);
+  text-decoration: none;
+}
+
+nav a {
   background-color: rgb(213, 198, 198);
   padding: 1%;
   border-radius: 10px;
@@ -36,20 +39,23 @@ a, a:hover, a:visited {
   align-items: center;
 }
 
-#form-button, #addNew-button {
+#form-button, #addNew-button, .friends-header a {
   padding: 1%;
   border-radius: 10px;
   background-color: rgb(249, 241, 239);
+}
+
+.friends-header a {
+  border: 2px outset buttonborder;
 }
 
 h1 {
   padding: 3%;
 }
 
-h2 {
+h3 {
   text-align: center;
   padding: 1%;
-  opacity: 0.5;
 }
 
 nav a {
@@ -80,12 +86,12 @@ nav a {
 .friend-container {
   width: 25%;
   background-color: rgb(249, 241, 239);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
   border: 3px dashed rgb(76, 76, 78);
   padding: 1%;
+}
+
+.friend-container a {
+  display: flex;
 }
 
 .add-friend {
@@ -100,4 +106,16 @@ nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.friend-page {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.friend-page p {
+  font-size: 1.5rem;
 }
