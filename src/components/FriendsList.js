@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Friend from './Friend'
 
@@ -21,7 +22,11 @@ class FriendsList extends React.Component {
         return(
         <>
             <div className='friends-list'>
-            <h2>this is the friends lsit</h2>
+                <div className='friends-header'>
+                    <h2>this is the friends list</h2>
+                    <Link to='/friends/add'>Add New Friend</Link>
+                </div>
+            
                 { !!this.state.friends.length && this.state.friends.map(fr => {
                     return <Friend friend={fr} key={fr.id}/>
                 })}

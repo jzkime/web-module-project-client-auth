@@ -2,21 +2,25 @@
   margin: 0 auto;
   padding: 0;
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 .App {
   text-align: center;
   background-color: rgb(249, 241, 239);
-  padding: 1%
+  padding-bottom: 2%;
 }
 
 a, a:hover, a:visited {
   text-decoration: none;
-  color:rgb(76, 76, 78)
+  color:rgb(76, 76, 78);
+  background-color: rgb(213, 198, 198);
+  padding: 1%;
+  border-radius: 10px;
 }
 
 .login-cred {
-  padding: 2%;
+  padding: 5%;
 }
 
 .login-cred form {
@@ -32,8 +36,8 @@ a, a:hover, a:visited {
   align-items: center;
 }
 
-#form-button {
-  padding: 2%;
+#form-button, #addNew-button {
+  padding: 1%;
   border-radius: 10px;
   background-color: rgb(249, 241, 239);
 }
@@ -47,9 +51,13 @@ nav a {
   margin: 2%;
 }
 
-.friends-list h2 {
+.friends-header {
   width: 100%;
   text-align: center;
+}
+
+.friends-header h2 {
+  margin-bottom: 2%;
 }
 
 .friends-list {
@@ -70,4 +78,18 @@ nav a {
   align-items: center;
   row-gap: 20px;
   border: 3px dashed rgb(76, 76, 78);
+}
+
+.add-friend {
+  padding: 5%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.add-friend label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
