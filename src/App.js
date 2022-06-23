@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import Login from './components/Login'
@@ -9,15 +9,30 @@ import Logout from './components/Logout';
 import SelectedFriend from './components/SelectedFriend'
 
 function App() {
+  const [ loggedIn, setIsLoggedIn ] = useState(false)
+
+useEffect(() => {
+    if(!localStorage.getItem("token")) {
+      setIsLoggedIn(false)
+    } else {
+      setIsLoggedIn(true)
+    }
+}, [loggedIn])
 
   return (
     <Router>
       <div className="App">
         <h1>Client Auth Project</h1>
         <nav>
-            <Link to='login'>Login</Link>
-            <Link to='/friends'>Friends</Link>
-            <Link to='/logout'>Logout</Link>
+          {
+            loggedIn ?
+            <>
+              <Link to='/friends'>Friends</Link>
+              <Link to='/logout'>Logout</Link>
+            </>
+            :
+            <h4>please login</h4>
+          }
         </nav>
       </div>
 
