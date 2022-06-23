@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import axios from 'axios'
+import { axiosWithAuth } from '../axiosAuth'
 
 const initialForm = {
     name: '',
@@ -17,8 +17,7 @@ const AddFriend = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        axios.post("http://localhost:9000/api/friends", input, 
-            {headers: {authorization: localStorage.getItem("token")}})
+        axiosWithAuth().post("http://localhost:9000/api/friends", input)
                 .then(res => {
                     window.location.href = '/friends'
                 }).catch(err => console.error(err))

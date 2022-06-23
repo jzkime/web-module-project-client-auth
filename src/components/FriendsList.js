@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import axios from 'axios'
 import Friend from './Friend'
+import { axiosWithAuth } from '../axiosAuth'
 
 class FriendsList extends React.Component {
     state = {
@@ -11,7 +11,7 @@ class FriendsList extends React.Component {
 
     componentDidMount() {
         if(!this.state.friends.length){
-            axios.get("http://localhost:9000/api/friends", {headers: {authorization: localStorage.getItem("token")}})
+            axiosWithAuth().get("http://localhost:9000/api/friends")
                 .then(res => {
                     this.setState({...this.state, friends: res.data})
                 })

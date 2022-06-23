@@ -15,9 +15,9 @@ function App() {
       <div className="App">
         <h1>Client Auth Project</h1>
         <nav>
-          <Link to='/login'>Login</Link>
-          <Link to='/friends'>Friends</Link>
-          <Link to='/logout'>Logout</Link>
+            <Link to='login'>Login</Link>
+            <Link to='/friends'>Friends</Link>
+            <Link to='/logout'>Logout</Link>
         </nav>
       </div>
 

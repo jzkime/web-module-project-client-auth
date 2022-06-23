@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Friend = ({friend}) => {
-   const {name, age, email, id} = friend;
+   const {name, id} = friend;
 
     return (
         <div className='friend-container' >
